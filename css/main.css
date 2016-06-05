@@ -1,0 +1,46 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: #2d3c49;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-muted {
+  color: #7d97ad;
+}
+
+.main-logo {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.main-title {
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .main-logo {
+    margin: 10px auto;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+.divisor-col {
+  padding: 0;
+}
+
+.divisor-col hr {
+  background-color: #7d97ad;
+  border: none;
+  color: #7d97ad;
+  height: 5px;
+}
+
+.featured-image {
+  width: 100%
+}

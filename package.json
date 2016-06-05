@@ -1,0 +1,25 @@
+{
+  "name": "my-portfolio",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmmendezp/my-portfolio.git"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.4",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-csslint": "^1.0.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-nodeunit": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mkdir": "~1.0.0",
+    "grunt-w3c-html-validation": "^0.1.8"
+  },
+  "dependencies": {
+    "grunt-responsive-images": "^0.1.6"
+  }
+}
