@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     responsive_images: {
-      dev: {
+      server: {
         options: {
           engine: 'im',
           sizes: [{
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             width: 1200,
             quality: 25
             }, {
-            name: "large",
+            name: 'large',
             width: 1600,
             quality: 30
             }]
@@ -35,26 +35,27 @@ module.exports = function (grunt) {
 
     /* Clear out the images directory if it exists */
     clean: {
-      dev: {
+      server: {
         src: ['img'],
       }
     },
 
     /* Generate the images directory if it is missing */
     mkdir: {
-      dev: {
+      server: {
         options: {
           create: ['img']
         },
       },
     },
 
-    /* Copy the "fixed" images that don't go through processing into the images/directory */
+    /* Copy the 'fixed' images that don't go through processing into the img directory */
     copy: {
-      dev: {
+      server: {
         files: [{
           expand: true,
-          src: 'img_src/fixed/*.{gif,jpg,png}',
+          cwd: 'img_src',
+          src: 'fixed/*.{gif,jpg,png,svg}',
           dest: 'img/'
         }]
       },
@@ -80,38 +81,31 @@ module.exports = function (grunt) {
       options:{
         livereload: true
       },
-      all: {
+      server: {
         files: [
-          "./css/*.css",
-          "./js/*.js",
-          "./*.html"
+          'css/*.css',
+          'js/*.js',
+          '*.html',
+          'Gruntfile.js'
         ]
       },
-      html: {
-        files: ['./*.html'],
-        tasks: ['validation']
-      },
-      css: {
-        files: ['./css/*.css'],
-        tasks: ['clean:csslint', 'csslint']
-      },
-      js: {
+      images: {
         files: [
-          "Gruntfile.js",
-          "./js/*.js"
+          'img_src/*.{gif,jpg,png}',
+          'img_src/fixed/*.{gif,jpg,png,svg}',
         ],
-        tasks: ['clean:jshint', 'jshint']
+        tasks: ['images']
       }
     },
 
     /* CSS Lint */
     csslint: {
-      all: ['./css/*.css']
+      server: ['css/*.css']
     },
 
     /* JSHint */
     jshint: {
-      all: ['Gruntfile.js', './js/*.js']
+      server: ['Gruntfile.js', 'js/*.js']
     },
 
     /* HTML validation */
@@ -123,22 +117,32 @@ module.exports = function (grunt) {
         reportpath: false
       },
       files: {
-        src: ["./*.html"]
+        src: ['*.html']
       }
     }
   });
 
   /* Create the `serve` task */
   grunt.registerTask('serve',[
-    'validation',
-    'csslint',
-    'jshint',
     'clean',
     'mkdir',
     'copy',
     'responsive_images',
     'connect',
     'watch'
+  ]);
+
+  grunt.registerTask('validate', [
+    'validation',
+    'csslint',
+    'jshint'
+  ]);
+
+  grunt.registerTask('images', [
+    'clean',
+    'mkdir',
+    'copy',
+    'responsive_images'
   ]);
 
   grunt.loadNpmTasks('grunt-contrib-clean');

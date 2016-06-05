@@ -12,3 +12,6 @@ node_modules
 
 # Validation files/folder
 reports
+
+# generated images
+img

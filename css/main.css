@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #2d3c49;
 }
 
@@ -11,8 +11,9 @@ body {
   color: #7d97ad;
 }
 
+/* Header */
 .main-logo {
-  width: 100px;
+  width: 200px;
   margin: 10px 0;
 }
 
@@ -36,10 +37,10 @@ body {
 
 .divisor-col hr {
   background-color: #7d97ad;
-  border: none;
-  color: #7d97ad;
   height: 5px;
 }
+
+/* Featured Work */
 
 .featured-image {
   width: 100%
