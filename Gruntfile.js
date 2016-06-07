@@ -125,10 +125,7 @@ module.exports = function (grunt) {
 
   /* Create the `serve` task */
   grunt.registerTask('serve',[
-    'clean',
-    'mkdir',
-    'copy',
-    'responsive_images',
+    'images',
     'connect',
     'watch'
   ]);

@@ -24,5 +24,5 @@ Once you've successfully replicated the design mockup, you are encouraged to con
 
 ## Other tasks
 
-* With `grunt images` it generates the needed `img` folder and creates the different image sizes.
-* With `grunt validate` it runs `JSHint`, `CSSLint` and html W3C validation of the files.
+* `grunt images` generates the needed `img` folder and creates the different image sizes (This is included when running `grunt serve`).
+* `grunt validate` runs `JSHint`, `CSSLint` and html W3C validation of corresponding files.
