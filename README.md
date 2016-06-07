@@ -13,3 +13,16 @@ Once you've successfully replicated the design mockup, you are encouraged to con
 * Validate your HTML and CSS against the W3C's Validators. Note: the validators consider the following errors, whereas Udacity accepts these errors as acceptable:
   * HTML5: Bad value X-UA-Compatible for attribute http-equiv on element meta when using the X-UA-Compatible meta tag.
   * CSS3: Property [some property here] is an unknown vendor extension when using vendor prefixed properties (like -moz-box-sizing).
+
+
+## Steps to run
+
+1. Clone the repository by downloading the zip file or using `git clone`.
+2. Open a terminal and go to the project folder.
+3. Execute `grunt serve`
+4. Navigate to [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Other tasks
+
+* With `grunt images` it generates the needed `img` folder and creates the different image sizes.
+* With `grunt validate` it runs `JSHint`, `CSSLint` and html W3C validation of the files.

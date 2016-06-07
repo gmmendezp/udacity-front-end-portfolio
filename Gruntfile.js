@@ -7,7 +7,7 @@ module.exports = function (grunt) {
           engine: 'im',
           sizes: [{
             name: 'small',
-            width: 640,
+            width: 600,
             quality: 20
             }, {
             name: 'medium',
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             quality: 25
             }, {
             name: 'large',
-            width: 1600,
+            width: 1500,
             quality: 30
             }]
         },
@@ -86,7 +86,8 @@ module.exports = function (grunt) {
           'css/*.css',
           'js/*.js',
           '*.html',
-          'Gruntfile.js'
+          'Gruntfile.js',
+          'img/*'
         ]
       },
       images: {
