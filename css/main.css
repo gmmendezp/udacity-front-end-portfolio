@@ -1,6 +1,8 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
 body {
-  font-family: "Lato", sans-serif;
-  color: #2d3c49;
+  font-family: "Raleway", sans-serif;
+  color: #36648b;
 }
 
 .text-thin {
@@ -8,7 +10,17 @@ body {
 }
 
 .text-muted {
-  color: #7d97ad;
+  color: #007fff;
+}
+
+/* Division line */
+.division-col {
+  padding: 0;
+}
+
+.division-col hr {
+  background-color: #06a;
+  height: 5px;
 }
 
 /* Header */
@@ -31,17 +43,29 @@ body {
   }
 }
 
-.divisor-col {
-  padding: 0;
-}
-
-.divisor-col hr {
-  background-color: #7d97ad;
-  height: 5px;
-}
-
 /* Featured Work */
 
 .featured-image {
   width: 100%
+}
+
+article {
+  margin-bottom: 30px;
+}
+
+/* Social Links */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  color: #06a;
+}
+
+/* Footer */
+footer {
+  margin: 20px 0 50px;
+}
+
+.social-link {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 10px;
 }
