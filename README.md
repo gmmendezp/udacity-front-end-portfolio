@@ -14,11 +14,15 @@ Once you've successfully replicated the design mockup, you are encouraged to con
   * HTML5: Bad value X-UA-Compatible for attribute http-equiv on element meta when using the X-UA-Compatible meta tag.
   * CSS3: Property [some property here] is an unknown vendor extension when using vendor prefixed properties (like -moz-box-sizing).
 
+## Dependencies
+* [npm](https://www.npmjs.com/)
+* [GraphicsMagick](http://www.graphicsmagick.org/) or [ImageMagick](http://www.imagemagick.org/script/index.php)
 
 ## Steps to run
 
 1. Clone the repository by downloading the zip file or using `git clone`.
 2. Open a terminal and go to the project folder.
+3. Execute `npm install` and wait for it to finish.
 3. Execute `grunt serve`
 4. Navigate to [http://localhost:8000](http://localhost:8000) in your browser.
 

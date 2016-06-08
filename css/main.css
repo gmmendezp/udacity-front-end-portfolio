@@ -18,7 +18,7 @@ body {
   padding: 0;
 }
 
-.division-col hr {
+.division-line {
   background-color: #06a;
   height: 5px;
 }
